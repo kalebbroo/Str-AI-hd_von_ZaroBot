@@ -1,7 +1,10 @@
 #!/bin/bash
 
-echo "Building Docker Image..."
-docker build -t discord-strahd-bot .
+echo The mists are gathering...
+docker build -t strahd_bot:latest .
 
-echo "Running Docker Container..."
-docker run discord-strahd-bot
+echo Barovia is calling...
+docker run --name strahd_bot strahd_bot:latest
+
+# Pause the script
+read -p "Press enter to continue..."

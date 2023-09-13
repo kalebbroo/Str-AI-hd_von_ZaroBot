@@ -1,0 +1,18 @@
+[build-system]
+requires = ["poetry-core>=1.7.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "Str-AI-hd_von_ZaroBot"
+version = "0.1.0"
+description = "A Discord bot simulating Strahd von Zarovich using ChatGPT"
+authors = ["Kalebbroo"]
+
+[tool.poetry.dependencies]
+python = "^3.11.4"
+"discord.py" = "^2.3.2"
+openai = "^0.28.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.2"

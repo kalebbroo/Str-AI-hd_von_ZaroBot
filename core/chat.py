@@ -60,13 +60,11 @@ class Chat(commands.Cog):
                 if len(self.user_memory[message.author.id]) > 5:
                     self.user_memory[message.author.id] = self.user_memory[message.author.id][-5:]
 
-                await message.reply(response['choices'][0]['message']['content'])
-
                 # Create the embed
                 embed = discord.Embed(description=response['choices'][0]['message']['content'], color=0x3498db)  # Use any desired color
                 embed.set_image(url=mood_image_url)
                 embed.set_author(name="Strahd von Zarovich", icon_url=self.bot.user.avatar.url)
-                
+                            
                 await message.reply(embed=embed)
 
     # def get_system_instruction(self, mood, topic, backstory):
