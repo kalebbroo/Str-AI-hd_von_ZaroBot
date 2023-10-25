@@ -56,9 +56,10 @@ class Chat(commands.Cog):
                 # Append the recent conversation
                 self.user_memory[message.author.id].append(messages)
 
-                # Ensure only the last 2 conversations are kept
-                if len(self.user_memory[message.author.id]) > 2:
-                    self.user_memory[message.author.id] = self.user_memory[message.author.id][-2:]
+                # Ensure only the last conversation is kept
+                if len(self.user_memory[message.author.id]) > 1:
+                    self.user_memory[message.author.id] = self.user_memory[message.author.id][-1:]
+
 
                 # Create the embed
                 embed = discord.Embed(description=response['choices'][0]['message']['content'], color=0x3498db)  # Use any desired color
